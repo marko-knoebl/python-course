@@ -5,9 +5,7 @@ def calculator_program():
 
     operation = raw_input('choose an operation: ')
 
-    if operation in valid_operations:
-        print 'you have chosen a valid operation'
-    else:
+    if operation not in valid_operations:
         print 'Invalid operation! choose + or -'
         # verlasse die Funktion
         return None
