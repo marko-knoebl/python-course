@@ -20,8 +20,17 @@ assert sum_list([2, 3, 6]) == 11
 assert sum_list([1, 2, 3, 4, 5, 6]) == 21
 
 def calculator(num1, num2, operation):
-    
+    if operation == '*':
+        return num1 * num2
+    if operation == '-':
+        return num1 - num2
+    if operation == '^':
+        result = 1
+        for i in range(num2):
+            result *= num1
+        return result
 
 
 assert calculator(2, 3, '*') == 6
 assert calculator(1, 5, '-') == -4
+assert calculator(2, 3, '^') == 8
